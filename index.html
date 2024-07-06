@@ -200,6 +200,11 @@
             margin-bottom: 50px;
         }
 
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+
         footer {
             padding: 20px 0;
             border-top: 1px solid var(--text-color);
@@ -268,8 +273,8 @@
     <main class="container">
         <section id="home" class="hero section">
             <div class="hero-content">
-                <h1>Innocent is a <span style="color: var(--accent-color);">Full Stack Developer</span></h1>
-                <p>He crafts responsive web applications and teaches digital literacy</p>
+                <h1>Innocent is a <span style="color: var(--accent-color);">Software Engineer</span></h1>
+                <p>He crafts responsive web applications and rich mobile applications</p>
                 <a href="#contacts" class="btn">Contact me !!</a>
                 <p>Currently working on <span style="color: var(--accent-color);">SaaS Projects</span></p>
             </div>
@@ -316,15 +321,16 @@
             <h2 class="section-title">skills</h2>
             <div class="skill-category">
                 <h3>Programming Languages</h3>
-                <p>JavaScript, PHP, Java, C++, C</p>
+                <p>C#, JavaScript, PHP, Java</p>
             </div>
             <div class="skill-category">
                 <h3>Technologies</h3>
-                <p>Laravel, React, NextJs, React Native, Expo, MySQL</p>
+                <p>.NET, NodeJs, Laravel, React, NextJs, React Native, Expo, MySQL</p>
             </div>
             <div class="skill-category">
                 <h3>Artificial Intelligence</h3>
                 <p>Machine Learning</p>
+                <p>Game AI</p>
             </div>
             <div class="skill-category">
                 <h3>Networking</h3>
@@ -344,7 +350,7 @@
             <div class="about-content">
                 <h2 class="section-title">about-me</h2>
                 <p>Hello, I'm Innocent!</p>
-                <p>I'm a Full Stack Developer based in Malawi. With a BSc in Information and Communication Technology from Mzuzu University, I specialize in developing responsive web applications.</p>
+                <p>I'm a Software Engineer based in Malawi. With a BSc in Information and Communication Technology from Mzuzu University, I specialize in developing responsive web applications.</p>
                 <p>My experience spans from building backend APIs to designing intuitive front-end interfaces. I'm passionate about learning new technologies and frameworks, and I enjoy applying my skills to solve complex problems in the tech industry.</p>
                 <a href="#" class="btn">Read more -></a>
             </div>
@@ -359,9 +365,9 @@
             <div>
                 <h3>Contact me here</h3>
                 <p>
-                    <img src="/api/placeholder/20/20" alt="Email icon"> Email: innocentchombo@gmail.com<br>
-                    <img src="/api/placeholder/20/20" alt="LinkedIn icon"> LinkedIn: linkedin.com/in/innochombo<br>
-                    <img src="/api/placeholder/20/20" alt="Phone icon"> Phone: +265 888 74 87 58/+265 995 38 89 94
+                    <img class="icon" src="/zu-ze/mail_16993904.png" alt="Email icon"> Email: innocentchombo@gmail.com<br>
+                    <img class="icon" src="/zu-ze/linkedin_3536505.png" alt="LinkedIn icon"> LinkedIn: linkedin.com/in/innochombo<br>
+                    <img class="icon" src="/zu-ze/telephone-call_9073336.png" alt="Phone icon"> Phone: +265 888 74 87 58/+265 995 38 89 94
                 </p>
             </div>
         </section>
@@ -371,32 +377,32 @@
         <div class="container">
             <p>&copy; Copyright 2024. Made by Innocent E. Chombo</p>
             <div class="social-links">
-                <a href="#" aria-label="GitHub"><img src="/api/placeholder/20/20" alt="GitHub icon"></a>
-                <a href="https://www.linkedin.com/in/innochombo" aria-label="LinkedIn"><img src="/api/placeholder/20/20" alt="LinkedIn icon"></a>
+                <a href="#" aria-label="GitHub"><img  class="icon" src="/zu-ze/git_6038629.png" alt="GitHub icon"></a>
+                <a href="https://www.linkedin.com/in/innochombo" aria-label="LinkedIn"><img class="icon" src="/zu-ze/linkedin_3536505.png" alt="LinkedIn icon"></a>
             </div>
         </div>
     </footer>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('.section');
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                } else {
-                    entry.target.classList.remove('visible');
-                }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
             });
-        }, {
-            threshold: 0.1
-        });
 
-        sections.forEach(section => {
-            observer.observe(section);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
         });
-    });
     </script>
 </body>
 </html>
